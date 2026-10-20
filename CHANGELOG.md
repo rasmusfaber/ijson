@@ -2,6 +2,10 @@
 
 ## Development
 
+* The `python` backend no longer rescans a partially read string, number
+  or literal from its start every time a new chunk of input arrives,
+  which made parsing a single long lexeme quadratic in its length.
+
 ## [3.6.0]
 
 * Removed support for Python < 3.10
