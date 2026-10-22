@@ -79,7 +79,7 @@ def patch_yajl_sources() -> None:
 extra_sources = []
 extra_include_dirs = []
 libs = ['yajl']
-embed_yajl = os.environ.get('IJSON_EMBED_YAJL', None) == '1'
+embed_yajl = os.environ.get('IJSON_EMBED_YAJL', '1') == '1'
 if not embed_yajl:
     have_yajl = yajl_present()
 else:
